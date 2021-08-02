@@ -1,0 +1,45 @@
+#include "mh-z19b.h"
+#include "UART.h"
+void MH_Z19B_CO2(){
+	UART1_TX(0xFF);
+	UART1_TX(0x01);
+	UART1_TX(0x86);
+	UART1_TX(0x00);
+	UART1_TX(0x00);
+	UART1_TX(0x00);
+	UART1_TX(0x00);
+	UART1_TX(0x00);
+	UART1_TX(0x79);
+}
+/*
+Источник - https://revspace.nl/MHZ19
+ 2000 ppm range: 0xFF, 0x01, 0x99, 0x00, 0x00, 0x00, 0x07, 0xD0, 0x8F
+ 5000 ppm range: 0xFF, 0x01, 0x99, 0x00, 0x00, 0x00, 0x13, 0x88, 0xCB
+*/
+uint8_t MH_Z19B_SetRange(int range){
+	if(range == 5000){
+		UART1_TX(0xFF);
+		UART1_TX(0x01);
+		UART1_TX(0x99);
+		UART1_TX(0x00);
+		UART1_TX(0x00);
+		UART1_TX(0x00);
+		UART1_TX(0x13);
+		UART1_TX(0x88);
+		UART1_TX(0xCB);
+		return 0;
+	}
+	else if(range == 2000){
+		UART1_TX(0xFF);
+		UART1_TX(0x01);
+		UART1_TX(0x99);
+		UART1_TX(0x00);
+		UART1_TX(0x00);
+		UART1_TX(0x00);
+		UART1_TX(0x07);
+		UART1_TX(0xD0);
+		UART1_TX(0x8F);
+		return 0;
+	}
+	else return 1;
+}

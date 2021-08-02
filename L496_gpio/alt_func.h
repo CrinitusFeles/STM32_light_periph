@@ -1,0 +1,552 @@
+
+
+//stm32l496xx DS11585 Rev 11 p.99
+// ------------- Port_A alternative functions -------------------- //
+#define PA0_TIM2_CH1 			AF1
+#define PA0_TIM5_CH1 			AF2
+#define PA0_TIM8_ETR 			AF3
+#define PA0_USART2_CTS 			AF7
+#define PA0_UART4_TX 			AF8
+#define PA0_SAI1_EXTCLK 		AF13
+#define PA0_TIM2_ETR	 		AF14
+
+#define PA1_TIM2_CH2 			AF1
+#define PA1_TIM5_CH2 			AF2
+#define PA1_I2C1_SMBA			AF4
+#define PA1_SPI1_SCK 			AF5
+#define PA1_USART2_RTS_DE		AF7
+#define PA1_UART4_RX 			AF8
+#define PA1_LCD_SEG0	 		AF11
+#define PA1_TIM15_CH1N		 	AF14
+
+#define PA2_TIM2_CH3			AF1
+#define PA2_TIM5_CH3			AF2
+#define PA2_USART2_TX			AF7
+#define PA2_LPUART1_TX			AF8
+#define PA2_QUADSPI_BK1_NCS		AF10
+#define PA2_LCD_SEG1			AF11
+#define PA2_SAI2_EXTCLK			AF13
+#define PA2_TIM15_CH1			AF14
+
+#define PA3_TIM2_CH4			AF1
+#define PA3_TIM5_CH4			AF2
+#define PA3_USART2_RX			AF7
+#define PA3_LPUART1_RX			AF8
+#define PA3_QUADSPI_CLK			AF10
+#define PA3_LCD_SEG2			AF11
+#define PA3_SAI1_MCLK_A			AF13
+#define PA3_TIM15_CH2			AF14
+
+#define PA4_SPI1_NSS			AF5
+#define PA4_SPI3_NSS			AF6
+#define PA4_USART2_CK			AF7
+#define PA4_QUADSPI_BK1_IO2		AF10
+#define PA4_LCD_SEG4			AF11
+#define PA4_TIM17_CH1			AF14
+
+#define PA5_TIM2_CH1			AF1
+#define PA5_TIM2_ETR			AF2
+#define PA5_TIM8_CH1N			AF3
+#define PA5_SPI1_SCK			AF5
+#define PA5_LPTIM2_ETR			AF14
+
+#define PA6_TIM1_BKIN			AF1
+#define PA6_TIM3_CH1			AF2
+#define PA6_TIM8_BKIN			AF3
+#define PA6_DCMI_PIXCLK			AF4
+#define PA6_SPI1_MISO			AF5
+#define PA6_USART3_CTS			AF7
+#define PA6_LPUART1_CTS			AF8
+#define PA6_QUADSPI_BK1_IO3		AF10
+#define PA6_LCD_SEG3			AF11
+#define PA6_TIM1_BKIN_COMP2		AF12
+#define PA6_TIM8_BKIN_COMP2		AF13
+#define PA6_TIM16_CH1			AF14
+
+#define PA7_TIM1_CH1N			AF1
+#define PA7_TIM3_CH2			AF2
+#define PA7_TIM8_CH1N			AF3
+#define PA7_I2C3_SCL			AF4
+#define PA7_SPI1_MOSI			AF5
+#define PA7_QUADSPI_BK1_IO2		AF10
+#define PA7_LCD_SEG4			AF11
+#define PA7_TIM17_CH1			AF14
+
+#define PA8_MCO1				AF0
+#define PA8_TIM1_CH1			AF1
+#define PA8_USART1_CK			AF7
+#define PA8_OTG_FS_SOF			AF10
+#define PA8_LCD_COM0			AF11
+#define PA8_SWPMI1_IO			AF12
+#define PA8_SAI1_SCK_A			AF13
+#define PA8_LPTIM2_OUT			AF14
+
+#define PA9_TIM1_CH2			AF1
+#define PA9_SPI2_SCK			AF3
+#define PA9_DCMI_D0				AF5
+#define PA9_USART1_TX			AF7
+#define PA9_LCD_COM1			AF11
+#define PA9_SAI1_FS_A			AF13
+#define PA9_TIM15_BKIN			AF14
+
+#define PA10_TIM1_CH3			AF1
+#define PA10_DCMI_D1			AF5
+#define PA10_USART1_RX			AF7
+#define PA10_OTG_FS_ID			AF10
+#define PA10_LCD_COM2			AF11
+#define PA10_SAI1_SD_A			AF13
+#define PA10_TIM17_BKIN			AF14
+
+#define PA11_TIM1_CH4			AF1
+#define PA11_TIM1_BKIN2			AF2
+#define PA11_TIM1_SPI1_MISO		AF5
+#define PA11_USART1_CTS			AF7
+#define PA11_CAN1_RX			AF9
+#define PA11_OTG_FS_DM			AF10
+#define PA11_TIM1_BKIN2_COMP1	AF12
+
+#define PA12_TIM1_ETR			AF1
+#define PA12_SPI1_MOSI			AF5
+#define PA12_USART1_RTS_DE		AF7
+#define PA12_CAN1_TX			AF9
+#define PA12_OTG_FS_DP			AF10
+
+
+#define PA13_JTMS_SWDIO			AF0
+#define PA13_IR_OUT				AF1
+#define PA13_OTG_FS_NOE			AF10
+#define PA13_SWPMI1_TX			AF12
+#define PA13_SAI1_SD_B			AF13
+
+#define PA14_JTCK_SWCLK			AF0
+#define PA14_LPTIM1_OUT			AF1
+#define PA14_I2C1_SMBA			AF4
+#define PA14_I2C4_SMBA			AF5
+#define PA14_OTG_FS_SOF			AF10
+#define PA14_SWPMI1_RX			AF12
+#define PA14_SAI1_FS_B			AF13
+
+#define PA15_JTDI				AF0
+#define PA15_TIM2_CH1			AF1
+#define PA15_TIM2_ETR			AF2
+#define PA15_USART2_RX			AF3
+#define PA15_SPI1_NSS			AF5
+#define PA15_SPI3_NSS			AF6
+#define PA15_USART3_RTS_DE		AF7
+#define PA15_UART4_RTS_DE		AF8
+#define PA15_TSC_G3_IO1			AF9
+#define PA15_LCD_SEG17			AF11
+#define PA15_SWPMI1_SUSPEND		AF12
+#define PA15_SAI2_FS_B			AF13
+
+// ------------- Port_B alternative functions -------------------- //
+
+#define PB0_TIM1_CH2N			AF1
+#define PB0_TIM3_CH3			AF2
+#define PB0_TIM8_CH2N			AF3
+#define PB0_SPI1_NSS			AF5
+#define PB0_USART3_CK			AF7
+#define PB0_QUADSPI_BK1_IO1		AF10
+#define PB0_LCD_SEG5			AF11
+#define PB0_COMP1_OUT			AF12
+#define PB0_SAI1_EXTCLK			AF13
+
+#define PB1_TIM1_CH3N			AF1
+#define PB1_TIM3_CH4			AF2
+#define PB1_TIM8_CH3N			AF3
+#define PB1_DFSDM1_DATIN0		AF6
+#define PB1_USART3_RTS_DE		AF7
+#define PB1_LPUART1_RTS_DE		AF8
+#define PB1_QUADSPI_BK1_IO0		AF10
+#define PB1_LCD_SEG6			AF11
+#define PB1_LPTIM2_IN1			AF14
+
+#define PB2_RTC_OUT				AF0
+#define PB2_LPTIM1_OUT			AF1
+#define PB2_I2C3_SMBA			AF4
+#define PB2_DFSDM1_CKIN0		AF6
+#define PB2_LCD_VLCD			AF11
+
+#define PB3_JTDO_TRACESWO		AF0
+#define PB3_JTIM2_CH2			AF1
+#define PB3_SPI1_SCK			AF5
+#define PB3_SPI3_SCK			AF6
+#define PB3_USART1_RTS_DE		AF7
+#define PB3_OTG_FS_CRS_SYNC		AF10
+#define PB3_LCD_SEG7			AF11
+#define PB3_SAI1_SCK_B			AF13
+
+#define PB4_NJTRST				AF0
+#define PB4_TIM3_CH1			AF2
+#define PB4_I2C3_SDA			AF4
+#define PB4_SPI1_MISO			AF5
+#define PB4_SPI3_MISO			AF6
+#define PB4_USART1_CTS			AF7
+#define PB4_UART5_RTS_DE		AF8
+#define PB4_TSC_G2_IO1			AF9
+#define PB4_DCMI_D12			AF10
+#define PB4_LCD_SEG8			AF11
+#define PB4_SAI1_MCLK_B			AF13
+#define PB4_TIM17_BKIN			AF14
+
+#define PB5_LPTIM1_IN1			AF1
+#define PB5_TIM3_CH2			AF2
+#define PB5_CAN2_RX				AF3
+#define PB5_I2C1_SMBA			AF4
+#define PB5_SPI1_MOSI			AF5
+#define PB5_SPI3_MOSI			AF6
+#define PB5_USART1_CK			AF7
+#define PB5_UART5_CTS			AF8
+#define PB5_TSC_G2_IO2			AF9
+#define PB5_DCMI_D10			AF10
+#define PB5_LCD_SEG9			AF11
+#define PB5_COMP2_OUT			AF12
+#define PB5_SAI1_SD_B			AF13
+#define PB5_TIM16_BKIN			AF14
+
+#define PB6_LPTIM1_ETR			AF1
+#define PB6_TIM4_CH1			AF2
+#define PB6_TIM8_BKIN2			AF3
+#define PB6_I2C1_SCL			AF4
+#define PB6_I2C4_SCL			AF5
+#define PB6_DFSDM1_DATIN5		AF6
+#define PB6_USART1_TX			AF7
+#define PB6_CAN2_TX				AF8
+#define PB6_TSC_G2_IO3			AF9
+#define PB6_DCMI_D5				AF10
+#define PB6_TIM8_BKIN2_COMP2	AF12
+#define PB6_SAI1_FS_B			AF13
+#define PB6_TIM16_CH1N			AF14
+
+#define PB7_LPTIM1_IN2			AF1
+#define PB7_TIM4_CH2			AF2
+#define PB7_TIM8_BKIN			AF3
+#define PB7_I2C1_SDA			AF4
+#define PB7_I2C4_SDA			AF5
+#define PB7_DFSDM1_CKIN5		AF6
+#define PB7_USART1_RX			AF7
+#define PB7_UART4_CTS			AF8
+#define PB7_TSC_G2_IO4			AF9
+#define PB7_DCMI_VSYNC			AF10
+#define PB7_LCD_SEG21			AF11
+#define PB7_FMC_NL				AF12
+#define PB7_TIM8_BKIN_COMP1		AF13
+#define PB7_TIM17_CH1N			AF14
+
+#define PB8_TIM4_CH3			AF2
+#define PB8_I2C1_SCL			AF4
+#define PB8_DFSDM1_DATIN6		AF6
+#define PB8_CAN1_RX				AF9
+#define PB8_DCMI_D6				AF10
+#define PB8_LCD_SEG16			AF11
+#define PB8_SDMMC1_D4			AF12
+#define PB8_SAI1_MCLK_A			AF13
+#define PB8_TIM16_CH1			AF14
+
+#define PB9_IR_OUT				AF1
+#define PB9_TIM4_CH4			AF2
+#define PB9_I2C1_SDA			AF4
+#define PB9_SPI2_NSS			AF5
+#define PB9_DFSDM1_CKIN6		AF6
+#define PB9_CAN1_TX				AF9
+#define PB9_DCMI_D7				AF10
+#define PB9_LCD_COM3			AF11
+#define PB9_SDMMC1_D5			AF12
+#define PB9_SAI1_FS_A			AF13
+#define PB9_TIM17_CH1			AF14
+
+#define PB10_TIM2_CH3			AF1
+#define PB10_I2C4_SCL			AF3
+#define PB10_I2C2_SCL			AF4
+#define PB10_SPI2_SCK			AF5
+#define PB10_DFSDM1_DATIN7		AF6
+#define PB10_USART3_TX			AF7
+#define PB10_LPUART1_RX			AF8
+#define PB10_TSC_SYNC			AF9
+#define PB10_QUADSPI_CLK		AF10
+#define PB10_LCD_SEG10			AF11
+#define PB10_COMP1_OUT			AF12
+#define PB10_SAI1_SCK_A			AF13
+
+#define PB11_TIM2_CH4			AF1
+#define PB11_I2C4_SDA			AF3
+#define PB11_I2C2_SDA			AF4
+#define PB11_DFSDM1_CKIN7		AF6
+#define PB11_USART3_RX			AF7
+#define PB11_LPUART1_TX			AF8
+#define PB11_QUADSPI_BK1_NCS	AF10
+#define PB11_LCD_SEG11			AF11
+#define PB11_COMP2_OUT			AF12
+
+#define PB12_TIM1_BKIN			AF1
+#define PB12_TIM1_BKIN_COMP2	AF3
+#define PB12_I2C2_SMBA			AF4
+#define PB12_SPI2_NSS			AF5
+#define PB12_DFSDM1_DATIN1		AF6
+#define PB12_USART3_CK			AF7
+#define PB12_LPUART1_RTS_DE		AF8
+#define PB12_TSC_G1_IO1			AF9
+#define PB12_CAN2_RX			AF10
+#define PB12_LCD_SEG12			AF11
+#define PB12_SWPMI1_IO			AF12
+#define PB12_SAI2_FS_A			AF13
+#define PB12_TIM15_BKIN			AF14
+
+#define PB13_TIM1_CH1N			AF1
+#define PB13_I2C2_SCL			AF4
+#define PB13_SPI2_SCK			AF5
+#define PB13_DFSDM1_CKIN1		AF6
+#define PB13_USART3_CTS			AF7
+#define PB13_LPUART1_CTS		AF8
+#define PB13_TSC_G1_IO2			AF9
+#define PB13_CAN2_TX			AF10
+#define PB13_LCD_SEG13			AF11
+#define PB13_SWPMI1_TX			AF12
+#define PB13_SAI2_SCK_A			AF13
+#define PB13_TIM15_CH1N			AF14
+
+#define PB14_TIM1_CH2N			AF1
+#define PB14_TIM8_CH2N			AF3
+#define PB14_I2C2_SDA			AF4
+#define PB14_SPI2_MISO			AF5
+#define PB14_DFSDM1_DATIN2		AF6
+#define PB14_USART3_RTS_DE		AF7
+#define PB14_TSC_G1_IO3			AF9
+#define PB14_LCD_SEG14			AF11
+#define PB14_SWPMI1_RX			AF12
+#define PB14_SAI2_MCLK_A		AF13
+#define PB14_TIM15_CH1			AF14
+
+#define PB15_RTC_REFIN			AF0
+#define PB15_TIM1_CH3N			AF1
+#define PB15_TIM8_CH3N			AF3
+#define PB15_SPI2_MOSI			AF5
+#define PB15_DFSDM1_CKIN2		AF6
+#define PB15_TSC_G1_IO4			AF9
+#define PB15_LCD_SEG15			AF11
+#define PB15_SWPMI1_SUSPEND		AF12
+#define PB15_SAI2_SD_A			AF13
+#define PB15_TIM15_CH2			AF14
+
+// ------------- Port_C alternative functions -------------------- //
+
+#define PC0_LPTIM1_IN1			AF1
+#define PC0_I2C4_SCL			AF2
+#define PC0_I2C3_SCL			AF4
+#define PC0_DFSDM1_DATIN4		AF6
+#define PC0_LPUART1_RX			AF8
+#define PC0_LCD_SEG18			AF9
+#define PC0_LPTIM2_IN1			AF14
+
+#define PC1_TRACED0				AF0
+#define PC1_LPTIM1_OUT			AF1
+#define PC1_I2C4_SDA			AF2
+#define PC1_SPI2_MOSI			AF3
+#define PC1_I2C3_SDA			AF4
+#define PC1_DFSDM1_CKIN4		AF6
+#define PC1_LPUART1_TX			AF8
+#define PC1_QUADSPI_BK2_IO0		AF10
+#define PC1_LCD_SEG19			AF11
+#define PC1_SAI1_SD_A			AF13
+
+#define PC2_LPTIM1_IN2			AF1
+#define PC2_SPI2_MISO			AF5
+#define PC2_DFSDM1_CKOUT		AF6
+#define PC2_QUADSPI_BK2_IO1		AF10
+#define PC2_LCD_SEG20			AF11
+
+#define PC3_LPTIM1_ETR			AF1
+#define PC3_SPI2_MOSI			AF5
+#define PC3_QUADSPI_BK2_IO2		AF10
+#define PC3_LCD_VLCD			AF11
+#define PC3_SAI1_SD_A			AF13
+#define PC3_LPTIM2_ETR			AF14
+
+#define PC4_USART3_TX			AF7
+#define PC4_QUADSPI_BK2_IO3		AF10
+#define PC4_LCD_SEG22			AF11
+
+#define PC5_USART3_RX			AF7
+#define PC5_LCD_SEG23			AF11
+
+#define PC6_TIM3_CH1			AF2
+#define PC6_TIM8_CH1			AF3
+#define PC6_DFSDM1_CKIN3		AF6
+#define PC6_TSC_G4_IO1			AF9
+#define PC6_DCMI_D0				AF10
+#define PC6_LCD_SEG24			AF11
+#define PC6_SDMMC1_D6			AF12
+#define PC6_SAI2_MCLK_A			AF13
+
+#define PC7_TIM3_CH2			AF2
+#define PC7_TIM8_CH2			AF3
+#define PC7_DFSDM1_DATIN3		AF6
+#define PC7_TSC_G4_IO2			AF9
+#define PC7_DCMI_D1				AF10
+#define PC7_LCD_SEG25			AF11
+#define PC7_SDMMC1_D7			AF12
+#define PC7_SAI2_MCLK_B			AF13
+
+#define PC8_TIM3_CH3			AF2
+#define PC8_TIM8_CH3			AF3
+#define PC8_TSC_G4_IO3			AF9
+#define PC8_DCMI_D2				AF10
+#define PC8_LCD_SEG26			AF11
+#define PC8_SDMMC1_D0			AF12
+
+#define PC9_TIM8_BKIN2			AF1
+#define PC9_TIM3_CH4			AF2
+#define PC9_TIM8_CH4			AF3
+#define PC9_DCMI_D3				AF4
+#define PC9_I2C3_SDA			AF6
+#define PC9_TSC_G4_IO4			AF9
+#define PC9_OTG_FS_NOE			AF10
+#define PC9_LCD_SEG27			AF11
+#define PC9_SDMMC1_D1			AF12
+#define PC9_SAI2_EXTCLK			AF13
+#define PC9_TIM8_BKIN2_COMP1	AF14
+
+#define PC10_TRACED1			AF0
+#define PC10_SPI3_SCK			AF6
+#define PC10_USART3_TX			AF7
+#define PC10_UART4_TX			AF8
+#define PC10_TSC_G3_IO2			AF9
+#define PC10_DCMI_D8			AF10
+#define PC10_LCD_COM4			AF11
+#define PC10_LCD_SEG40			AF11
+#define PC10_LCD_SEG28			AF11
+#define PC10_SDMMC1_D2			AF12
+#define PC10_SAI2_SCK_B			AF13
+
+#define PC11_QUADSPI_BK2_NCS	AF5
+#define PC11_SPI3_MISO			AF6
+#define PC11_USART3_RX			AF7
+#define PC11_UART4_RX			AF8
+#define PC11_TSC_G3_IO3			AF9
+#define PC11_DCMI_D4			AF10
+#define PC11_LCD_COM5			AF11
+#define PC11_LCD_SEG29			AF11
+#define PC11_LCD_SEG41			AF11
+#define PC11_SDMMC1_D3			AF12
+#define PC11_SAI2_MCLK_B		AF13
+
+#define PC12_TRACED3			AF0
+#define PC12_SPI3_MOSI			AF6
+#define PC12_USART3_CK			AF7
+#define PC12_UART5_TX			AF8
+#define PC12_TSC_G3_IO4			AF9
+#define PC12_DCMI_D9			AF10
+#define PC12_LCD_COM6			AF11
+#define PC12_LCD_SEG30			AF11
+#define PC12_LCD_SEG42			AF11
+#define PC12_SDMMC1_CK			AF12
+#define PC12_SAI2_SD_B			AF13
+
+// ------------- Port_D alternative functions -------------------- //
+
+#define PD0_SPI2_NSS			AF5
+#define PD0_DFSDM1_DATIN7		AF6
+#define PD0_CAN1_RX				AF9
+#define PD0_FMC_D2				AF12
+
+#define PD1_SPI2_SCK			AF5
+#define PD1_DFSDM1_CKIN7		AF6
+#define PD1_CAN1_TX				AF9
+#define PD1_FMC_D3				AF12
+
+#define PD2_TRACED2				AF0
+#define PD2_TIM3_ETR			AF2
+#define PD2_USART3_RTS_DE		AF7
+#define PD2_UART5_RX			AF8
+#define PD2_TSC_SYNC			AF9
+#define PD2_DCMI_D11			AF10
+#define PD2_LCD_COM7			AF11
+#define PD2_LCD_SEG31			AF11
+#define PD2_LCD_SEG43			AF11
+#define PD2_SDMMC1_CMD			AF12
+
+#define PD3_SPI2_SCK			AF3
+#define PD3_DCMI_D5				AF4
+#define PD3_SPI2_MISO			AF5
+#define PD3_DFSDM1_DATIN0		AF6
+#define PD3_USART2_CTS			AF7
+#define PD3_QUADSPI_BK2_NCS		AF10
+#define PD3_FMC_CLK				AF12
+
+#define PD4_SPI2_SCK			AF3
+#define PD4_DCMI_D5				AF4
+#define PD4_SPI2_MISO			AF5
+#define PD4_DFSDM1_DATIN0		AF6
+#define PD4_USART2_CTS			AF7
+#define PD4_QUADSPI_BK2_IO0		AF10
+#define PD4_FMC_NOE				AF12
+
+#define PD5_USART2_TX			AF7
+#define PD5_QUADSPI_BK2_IO1		AF10
+#define PD5_FMC_NWE				AF12
+
+#define PD6_DCMI_D10			AF4
+#define PD6_QUADSPI_BK2_IO1		AF5
+#define PD6_DFSDM1_DATIN1		AF6
+#define PD6_USART2_RX			AF7
+#define PD6_QUADSPI_BK2_IO2		AF10
+#define PD6_FMC_NWAIT			AF12
+#define PD6_SAI1_SD_A			AF13
+
+#define PD7_DFSDM1_CKIN1		AF6
+#define PD7_USART2_CK			AF7
+#define PD7_QUADSPI_BK2_IO3		AF10
+#define PD7_FMC_NE1				AF12
+
+#define PD8_USART3_TX			AF7
+#define PD8_DCMI_HSYNC			AF10
+#define PD8_LCD_SEG28			AF11
+#define PD8_FMC_D13				AF12
+
+#define PD9_USART3_RX			AF7
+#define PD9_DCMI_PIXCLK			AF10
+#define PD9_LCD_SEG29			AF11
+#define PD9_FMC_D14				AF12
+#define PD9_SAI2_MCLK_A			AF13
+
+#define PD10_USART3_CK			AF7
+#define PD10_TSC_G6_IO1			AF9
+#define PD10_LCD_SEG30			AF11
+#define PD10_FMC_D15			AF12
+#define PD10_SAI2_SCK_A			AF13
+
+#define PD11_I2C4_SMBA			AF4
+#define PD11_USART3_CTS			AF7
+#define PD11_TSC_G6_IO2			AF9
+#define PD11_LCD_SEG31			AF11
+#define PD11_FMC_A16			AF12
+#define PD11_SAI2_SD_A			AF13
+#define PD11_LPTIM2_ETR			AF14
+
+#define PD12_TIM4_CH1			AF2
+#define PD12_I2C4_SCL			AF4
+#define PD12_USART3_RTS_DE		AF7
+#define PD12_TSC_G6_IO3			AF9
+#define PD12_LCD_SEG32			AF11
+#define PD12_FMC_A17			AF12
+#define PD12_SAI2_FS_A			AF13
+#define PD12_LPTIM2_IN1			AF14
+
+#define PD13_TIM4_CH2			AF2
+#define PD13_I2C4_SDA			AF4
+#define PD13_TSC_G6_IO4			AF9
+#define PD13_LCD_SEG33			AF11
+#define PD13_FMC_A18			AF12
+#define PD13_LPTIM2_OUT			AF14
+
+#define PD14_TIM4_CH3			AF2
+#define PD14_LCD_SEG34			AF11
+#define PD14_FMC_D0				AF12
+
+#define PD15_TIM4_CH4			AF2
+#define PD15_LCD_SEG35			AF11
+#define PD15_FMC_D1				AF12
+
+
+
+

@@ -1,0 +1,4 @@
+GPIO.c:32:6:gpio_init	40	static
+GPIO.c:83:6:gpio_state	24	static
+GPIO.c:102:6:gpio_toggle	24	static
+GPIO.c:121:5:gpio_read	24	static
